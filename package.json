@@ -1,0 +1,14 @@
+{
+  "name": "muhrizqiardi-blog-ghost-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/muhrizqiardi/muhrizqiardi-blog-ghost-theme",
+  "author": "Muhammad Rizqi Ardiansyah <rizqi.jpg@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "tailwind:watch": "tailwindcss -w -i ./assets/css/src/tailwind.css -o ./assets/css/dist/screen.css"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.7"
+  }
+}
