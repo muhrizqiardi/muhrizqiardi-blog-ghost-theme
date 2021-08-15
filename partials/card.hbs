@@ -1,0 +1,30 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<article class="{{post_class}} card.hbs grid lg:grid-cols-3 gap-6">
+  <img src="{{img_url feature_image size=" m"}}" class="w-full h-56 lg:h-40 object-cover rounded-2xl"
+    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+
+  <div class="desc lg:col-span-2">
+
+    <span class="mb-1 uppercase font-sub-heading text-primary">
+      {{date published_at format="DD MMMM YYYY "}}
+      at
+      {{date published_at format=" HH:MM"}}
+      <span class="text-gray-700">
+        by
+      </span>
+      {{#primary_author}}{{name}}{{/primary_author}}
+    </span>
+
+    <h2 class="mb-1 font-bold text-2xl leading-tight capitalize hover:text-primary">
+      <a href="{{url}}">{{title}}</a>
+    </h2>
+
+    <p class="leading-tight line-clamp-3 text-gray-700">
+      {{excerpt words="30"}}
+    </p>
+
+  </div>
+</article>

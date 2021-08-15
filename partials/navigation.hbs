@@ -1,0 +1,9 @@
+{{#if isSecondary}}
+  {{#foreach navigation}}
+    <a href="{{url absolute=" true"}}" class="m-3 hover:border-gray-700 border-b-2 border-transparent mb-0">{{label}}</a>
+  {{/foreach}}
+  {{else}}
+  {{#foreach navigation}}
+    <a href="{{url absolute=" true"}}" class="mb-3 hover:border-black {{#if current}} font-bold{{/if}} border-b-2 border-transparent">{{label}}</a>
+  {{/foreach}}
+{{/if}}

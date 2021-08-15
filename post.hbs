@@ -1,0 +1,40 @@
+{{!< default}} 
+
+{{#post}}
+
+<div class="mt-3 mb-6">
+  <span class="uppercase font-sub-heading text-primary">
+    {{date published_at format="DD MMMM YYYY "}}
+    at
+    {{date published_at format=" HH:MM"}}
+    <span class="text-gray-700">
+      by
+    </span>
+    {{#primary_author}}{{name}}{{/primary_author}}
+  </span>
+  
+  
+  <h2 class="mb-3 font-bold text-4xl leading-tight capitalize ">
+    {{title}}
+  </h2>
+
+  {{#if feature_image}}
+  <figure class="my-5 ">
+    <img class="rounded-2xl" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w, {{img_url
+      feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+      sizes="(max-width: 1000px) 1000px, 2000px" loading="lazy" src="{{img_url feature_image size=" xl"}}"
+      alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+    {{#if feature_image_caption}}
+    <figcaption>{{feature_image_caption}}</figcaption>
+    {{/if}}
+  </figure>
+  {{/if}}
+  
+  <article class="leading-tight prose max-w-none">
+    {{content}}
+  </article>
+
+</div>
+
+
+{{/post}}

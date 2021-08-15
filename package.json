@@ -1,14 +1,29 @@
 {
-  "name": "muhrizqiardi-blog-ghost-theme",
+  "name": "muhrizqiardi-blog",
+  "description": "A custom theme for my blog",
+  "demo": "https://blog.muhrizqiardi.me",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/muhrizqiardi/muhrizqiardi-blog-ghost-theme",
-  "author": "Muhammad Rizqi Ardiansyah <rizqi.jpg@gmail.com>",
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
   "license": "MIT",
+  "author": {
+    "name": "Ghost Foundation",
+    "email": "hello@ghost.org",
+    "url": "https://ghost.org"
+  },
+  "repository": "https://github.com/muhrizqiardi/muhrizqiardi-blog-ghost-theme",
   "scripts": {
-    "tailwind:watch": "tailwindcss -w -i ./assets/css/src/tailwind.css -o ./assets/css/dist/screen.css"
+    "tailwind:watch": "tailwindcss -w -i ./assets/css/src/tailwind.css -o ./assets/css/dist/screen.css",
+    "test": "gscan ."
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1",
     "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {
+    "gscan": "^4.2.1"
   }
 }

@@ -1,0 +1,23 @@
+<article class="grid lg:grid-cols-2 gap-6">
+  <img src="{{img_url feature_image size=" m"}}" class="w-full h-80 lg:w-96 lg:h-80 object-cover rounded-2xl" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"/>
+  <div class="desc lg:w-80 hover:brightness-110">
+    <p class="mb-3 uppercase font-sub-heading text-primary">
+      {{date published_at format="DD MMM YYYY "}}
+      <span class="text-gray-700">
+        at
+      </span>
+      {{date published_at format=" HH:MM"}}
+      <span class="text-gray-700">
+        by
+      </span>
+      {{#primary_author}}{{name}}{{/primary_author}}
+    </p>
+    <h2 class="mb-3 font-bold text-4xl capitalize hover:text-primary">
+      <a href="{{url}}" >{{title}}</a>
+    </h2>
+    <p class="leading-tight line-clamp-3 text-gray-700">
+      {{excerpt words="30"}}
+    </p>
+    </p>
+  </div>
+</article>

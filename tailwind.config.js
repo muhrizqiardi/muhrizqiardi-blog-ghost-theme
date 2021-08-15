@@ -11,6 +11,19 @@ module.exports = {
         'primary': '#FA8C4C',
         'dark': '#151518',
         'light': '#fffbf9',
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: '#FA8C4C',
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            },
+          }
+        }
       }
     },
   },
@@ -19,6 +32,9 @@ module.exports = {
       brightness: ['hover', 'focus'],
       borderWidth: ['hover', 'focus'],
     },
-    plugins: [],
-  }
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+  ],
 }
